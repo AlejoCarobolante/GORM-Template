@@ -17,9 +17,9 @@ type Entity1 struct {
 }
 
 type Entity1Repository interface {
-	Create(e context.Context, entity1 Entity1) error
-	Fetch(e context.Context) ([]Entity1, error)
-	FetchByID(e context.Context, id string) (Entity1, error)
-	Update(e context.Context, updatedEntity1 Entity1) error
-	Delete(e context.Context, id string) error
+	Create(c context.Context, entity1 Entity1) error
+	Fetch(c context.Context) ([]Entity1, error)
+	FetchById(c context.Context, id int) (Entity1, error)
+	Update(c context.Context, updatedEntity1 Entity1) error
+	Delete(c context.Context, id int) error
 }
