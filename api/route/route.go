@@ -12,7 +12,7 @@ func Setup(env *bootstrap.Env, timeout time.Duration, gin *gin.Engine) {
 	publicRouter := gin.Group("/api")
 
 	//Middleware para verificar AccessToken
-	protectedRouter := gin.Group("/api")
+	//protectedRouter := gin.Group("/api")
 
 	//Todas las API Privadas
 	NewEntityRouter(env, timeout, publicRouter)
