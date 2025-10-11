@@ -16,10 +16,10 @@ type Entity1 struct {
 	DeletedAt gorm.DeletedAt `json:"deleted_at"`
 }
 
-type BankAccountRepository interface {
-	Create(c context.Context, entity1 Entity1) error
-	Fetch(c context.Context) ([]Entity1, error)
-	FetchByID(c context.Context, id string) (Entity1, error)
-	Update(c context.Context, updatedEntity1 Entity1) error
-	Delete(c context.Context, id string) error
+type Entity1Repository interface {
+	Create(e context.Context, entity1 Entity1) error
+	Fetch(e context.Context) ([]Entity1, error)
+	FetchByID(e context.Context, id string) (Entity1, error)
+	Update(e context.Context, updatedEntity1 Entity1) error
+	Delete(e context.Context, id string) error
 }
